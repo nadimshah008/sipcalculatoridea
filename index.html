@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>NSCODE</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>SIP CALCULATOR</h1>
+            <div class="field">
+                <label for="">INVESTMENT AMOUNT ₹</label>
+                <div><input type="text" class="amount" placeholder="10000₹"></div>
+            </div>
+            <div class="field">
+                <label for="">Return Rate %</label>
+                <div><input type="text" class="rate" placeholder="15%"></div>
+            </div>
+            <div class="field">
+                <label for="">Duration Yrs</label>
+                <div><input type="text" class="time" placeholder="20Yrs"></div>
+            </div>
+            <button onclick="calculateSIP()">CALCULATE</button>
+            <h5>AMOUNT INVESTED: <p id="aInvested"></p></h5>
+            <h5>FINAL AMOUNT: <p id="finalAmount"></p></h5>
+        </div>       
+        <script>
+            var amount  =  document.querySelector(".amount");
+            var rate  =  document.querySelector(".rate");
+            var time  =  document.querySelector(".time");       
+             function calculateSIP(){
+                var monthlyRate = rate.value / 12 / 100; 
+                var months = time.value * 12;  
+                var futureValue = 0;
+                futureValue = amount.value * (Math.pow(1 + monthlyRate, months) - 1) /monthlyRate;
+                var amountInvested = amount.value*months;
+                console.log(futureValue, amountInvested);
+                document.getElementById("aInvested").innerHTML ="₹"+ amountInvested;
+                document.getElementById("finalAmount").innerHTML ="₹"+ Math.round(futureValue > 0 ? futureValue: 0);
+             }
+        </script>
+    </body>
+</html>

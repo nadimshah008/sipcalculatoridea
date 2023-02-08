@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(47deg, blue, red);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h1, h5 {
+  color: white;
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+input[type=text] {
+  padding: 10px;
+  color: #222;
+  width: 100%;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+.field {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  color: white;
+}
+
+button {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+#aInvested, #finalAmount {
+  font-size: 18px;
+}
+/*# sourceMappingURL=index.css.map */
